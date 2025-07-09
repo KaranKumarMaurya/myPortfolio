@@ -1,7 +1,7 @@
 export const personalData = {
   name: "Karan Kumar Maurya",
   profile: "/profile.png",
-  designation: "Full-Stack Developer | Safety Tech Specialist | Real-Time Systems Expert",
+  designation: "Full-Stack Developer – Mobile & Cloud",
   description: "I'm Karan, a passionate Full Stack Developer with a knack for building real-time, location-based, and scalable mobile. With deep expertise in Flutter, React Native, AWS, Firebase, Zapier, Zendesk and modern APIs, I specialize in turning product ideas into polished digital solutions. I’ve led and delivered end-to-end projects for startups, agencies, and my own safety-tech company. Always ready to build, ship, and scale.",
   email: "karankumarmaurya2002@gmail.com",
   phone: "+91-6239326152",
