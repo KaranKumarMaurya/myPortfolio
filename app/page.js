@@ -13,21 +13,35 @@ import Skills from "./components/homepage/skills";
 
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
+  // const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const res = await fetch(`https://dev.to/api/articles/latest?username=${personalData.devUsername}`);
-        const data = await res.json();
-        const filtered = data.filter(item => item?.cover_image).sort(() => Math.random() - 0.5);
-        setBlogs(filtered);
-      } catch (error) {
-        console.error("Failed to fetch blogs:", error);
-      }
-    };
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
 
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   if (!isClient) return;
+
+  //   const getData = async () => {
+  //     try {
+  //       const res = await fetch(`https://dev.to/api/articles/latest?username=${personalData.devUsername}`);
+        
+  //       if (!res.ok) {
+  //         throw new Error(`HTTP error! status: ${res.status}`);
+  //       }
+        
+  //       const data = await res.json();
+  //       const filtered = data.filter(item => item?.cover_image).sort(() => Math.random() - 0.5);
+  //       setBlogs(filtered);
+  //     } catch (error) {
+  //       console.error("Failed to fetch blogs:", error);
+  //       // Set empty array as fallback
+  //       setBlogs([]);
+  //     }
+  //   };
+
+  //   getData();
+  // }, [isClient]);
 
   return (
     <div suppressHydrationWarning>
