@@ -1,10 +1,8 @@
-<p align="center" width="100%">
-    <img height="100" src="https://github.com/said7388/developer-portfolio/assets/77630868/c0064908-cd5f-4751-a77c-eba90a62b55c">
-</p>
+
 
 ---
 
-# [Built Portfolio With GitHub ](https://github.com/said7388/github-portfolio)
+# [Built Portfolio With GitHub ](https://github.com/KaranKumarMaurya/myPortfolio)
 
 ---
 
@@ -145,27 +143,27 @@ GMAIL_PASSKEY =
 EMAIL_ADDRESS =
 ```
 
-### Then, Customize data in the `utils/data` [folder](https://github.com/said7388/developer-portfolio/tree/main/utils/data).
+### Then, Customize data in the `utils/data` [folder](ttps://github.com/KaranKumarMaurya/myPortfolio/blob/main/utils/data).
 
 Eg:
 
 ```javascript
 export const personalData = {
-  name: "ABU SAID",
+  name: "Karan Kumar Maurya",
   profile: "/profile.png",
-  designation: "Full-Stack Software Developer",
-  description: "My name is ABU SAID....",
-  email: "abusaid7388@gmail.com",
-  phone: "+8801608797655",
-  address: "Dhaka, Bangladesh",
-  github: "https://github.com/said7388",
-  facebook: "https://www.facebook.com/abusaid.riyaz/",
-  linkedIn: "https://www.linkedin.com/in/abu-said-bd/",
-  twitter: "https://twitter.com/said7388",
-  stackOverflow: "https://stackoverflow.com/users/16840768/abu-said",
-  leetcode: "https://leetcode.com/said3812/",
-  devUsername: "said7388",
-  resume: "...",
+  designation: "Full-Stack Developer | Safety Tech Specialist | Real-Time Systems Expert",
+  description: "I'm Karan, a passionate Full Stack Developer with a knack for building real-time, location-based, and scalable mobile. With deep expertise in Flutter, React Native, AWS, Firebase, Zapier, Zendesk and modern APIs, I specialize in turning product ideas into polished digital solutions. I’ve led and delivered end-to-end projects for startups, agencies, and my own safety-tech company. Always ready to build, ship, and scale.",
+  email: "xxxxxxx@gmail.com",
+  phone: "+91-xxxxxxxxxx",
+  address: "",
+  github: "https://github.com/KaranKumarMaurya",
+  facebook: "https://www.facebook.com/profile.php?id=100085470036585",
+  linkedIn: "https://www.linkedin.com/in/karan-kumar-maurya-841666270/",
+  twitter: "https://x.com/karank_maurya",
+  stackOverflow: "https://stackoverflow.com/users/17053578/karan-kumar-maurya",
+  leetcode: "https://leetcode.com/u/Karan_2002/",
+  devUsername: "karan_kumarmaurya_519cd8",
+  resume: ""
 };
 ```
 
