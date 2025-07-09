@@ -1,4 +1,3 @@
-// @flow strict
 
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
@@ -25,7 +24,7 @@ function HeroSection() {
           <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             Hello, <br />
             This is <span className=" text-pink-500">{personalData.name}</span>
-            {` , I'm a Professional `}
+            {` , I\u2019m a Professional `}
             <span className=" text-[#16f2b3]">{personalData.designation}</span>.
           </h1>
 
@@ -89,6 +88,8 @@ function HeroSection() {
             </Link>
           </div>
         </div>
+
+        {/* Right Side Terminal UI */}
         <div className="order-1 lg:order-2 from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37]">
           <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
@@ -111,92 +112,59 @@ function HeroSection() {
               </div>
               <div>
                 &nbsp;&nbsp;<span className="text-white">name:</span>&nbsp;
-                <span className="text-gray-400">'</span>
+                <span className="text-gray-400">&#39;</span>
                 <span className="text-amber-300">Karan Kumar Maurya</span>
-                <span className="text-gray-400">',</span>
+                <span className="text-gray-400">&#39;,</span>
               </div>
               <div>
                 &nbsp;&nbsp;<span className="text-white">skills:</span>&nbsp;
                 <span className="text-gray-400">[</span>
-                <span className="text-amber-300">'Flutter'</span>,&nbsp;
-                <span className="text-amber-300">'Firebase'</span>,&nbsp;
-                <span className="text-amber-300">'AWS'</span>,&nbsp;
-                <span className="text-amber-300">'React Native'</span>,&nbsp;
-                <span className="text-amber-300">'Node.js'</span>,&nbsp;
-                <span className="text-amber-300">'BLE'</span>,&nbsp;
-                <span className="text-amber-300">'Stripe'</span>,&nbsp;
-                <span className="text-amber-300">'Twilio'</span>,&nbsp;
-                <span className="text-amber-300">'Google Analytics'</span>,&nbsp;
-                <span className="text-amber-300">'GitHub'</span>,&nbsp;
-                <span className="text-amber-300">'Airbyte'</span>,&nbsp;
-                <span className="text-amber-300">'Snowflake'</span>,&nbsp;
-                <span className="text-amber-300">'DBT Cloud'</span>,&nbsp;
-                <span className="text-amber-300">'Lightdash'</span>,&nbsp;
-                <span className="text-amber-300">'Forest Admin'</span>,&nbsp;
-                <span className="text-amber-300">'Pipedrive'</span>,&nbsp;
-                <span className="text-amber-300">'Calendly'</span>,&nbsp;
-                <span className="text-amber-300">'Zapier'</span>,&nbsp;
-                <span className="text-amber-300">'Zendesk'</span>
+                <span className="text-amber-300">&#39;Flutter&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Firebase&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;AWS&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;React Native&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Node.js&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;BLE&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Stripe&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Twilio&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Google Analytics&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;GitHub&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Airbyte&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Snowflake&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;DBT Cloud&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Lightdash&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Forest Admin&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Pipedrive&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Calendly&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Zapier&#39;</span>,&nbsp;
+                <span className="text-amber-300">&#39;Zendesk&#39;</span>
                 <span className="text-gray-400">],</span>
               </div>
               <div>
                 &nbsp;&nbsp;<span className="text-white">hardWorker:</span>
-                &nbsp;
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
+                &nbsp;<span className="text-orange-400">true</span>,
               </div>
               <div>
                 &nbsp;&nbsp;<span className="text-white">quickLearner:</span>
-                &nbsp;
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
+                &nbsp;<span className="text-orange-400">true</span>,
               </div>
               <div>
                 &nbsp;&nbsp;<span className="text-white">problemSolver:</span>
-                &nbsp;
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
+                &nbsp;<span className="text-orange-400">true</span>,
               </div>
               <div>
                 &nbsp;&nbsp;<span className="text-green-400">hireable:</span>
-                &nbsp;
-                <span className="text-orange-400">function</span>&nbsp;
-                <span className="text-gray-400">() {"{"}</span>
+                &nbsp;<span className="text-orange-400">function</span> <span className="text-gray-400">() {"{"}</span>
               </div>
               <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="text-orange-400">return</span>&nbsp;
-                <span className="text-gray-400">(</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-orange-400">return</span> (<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-400">this.</span><span className="text-white">hardWorker</span> &amp;&amp;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-400">this.</span><span className="text-white">problemSolver</span> &amp;&amp;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-400">this.</span><span className="text-white">skills.length</span> &gt;= <span className="text-orange-400">5</span><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;);
               </div>
-              <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="text-cyan-400">this.</span>
-                <span className="text-white">hardWorker</span>&nbsp;
-                <span className="text-amber-300">&amp;&amp;</span>
-              </div>
-              <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="text-cyan-400">this.</span>
-                <span className="text-white">problemSolver</span>&nbsp;
-                <span className="text-amber-300">&amp;&amp;</span>
-              </div>
-              <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="text-cyan-400">this.</span>
-                <span className="text-white">skills.length</span>&nbsp;
-                <span className="text-amber-300">&gt;=</span>&nbsp;
-                <span className="text-orange-400">5</span>
-              </div>
-              <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="text-gray-400">);</span>
-              </div>
-              <div>
-                &nbsp;&nbsp;<span className="text-gray-400">{"}"};</span>
-              </div>
-              <div>
-                <span className="text-gray-400">{"}"};</span>
-              </div>
+              <div>&nbsp;&nbsp;<span className="text-gray-400">{"}"};</span></div>
+              <div><span className="text-gray-400">{"}"};</span></div>
             </code>
           </div>
         </div>
