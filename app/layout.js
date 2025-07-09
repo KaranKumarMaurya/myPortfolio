@@ -1,27 +1,22 @@
+'use client';
+
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
-import dynamic from 'next/dynamic';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/footer";
+import ScrollToTop from "./components/helper/scroll-to-top";
+import Navbar from "./components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
-
 const inter = Inter({ subsets: ["latin"] });
-
-// Dynamically import client-side components
-const ToastContainer = dynamic(
-  () => import('react-toastify').then((c) => c.ToastContainer),
-  { ssr: false }
-);
-
-const Navbar = dynamic(() => import('./components/navbar'), { ssr: true });
-const Footer = dynamic(() => import('./components/footer'), { ssr: true });
-const ScrollToTop = dynamic(() => import('./components/helper/scroll-to-top'), { 
-  ssr: false 
-});
 
 export const metadata = {
   title: "Portfolio of Karan - Full Stack & Flutter Developer",
-  description: "This is the portfolio of Karan Kumar Maurya...",
+  description:
+    "This is the portfolio of Karan Kumar Maurya — a full stack developer and Flutter expert passionate about building real-time apps, smart solutions, and scalable products. I specialize in Flutter, Firebase, and React, and I’m always open to collaborating on meaningful projects or joining a product-focused team.",
 };
+
 
 export default function RootLayout({ children }) {
   return (
@@ -35,7 +30,6 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
-      {/* Uncomment when ready with proper env var */}
       {/* <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} /> */}
     </html>
   );
