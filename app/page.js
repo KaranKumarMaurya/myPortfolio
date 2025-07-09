@@ -13,7 +13,7 @@ import Skills from "./components/homepage/skills";
 
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
-  // const [isClient, setIsClient] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   // useEffect(() => {
   //   setIsClient(true);
