@@ -15,39 +15,39 @@ export default function Home() {
   const [blogs, setBlogs] = useState([]);
   const [isClient, setIsClient] = useState(false);
 
-  // useEffect(() => {
-  //   setIsClient(true);
-  // }, []);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
-  // useEffect(() => {
-  //   if (!isClient) return;
+  useEffect(() => {
+    if (!isClient) return;
 
-  //   const getData = async () => {
-  //     try {
-  //       const res = await fetch(`https://dev.to/api/articles/latest?username=${personalData.devUsername}`);
+    const getData = async () => {
+      try {
+        const res = await fetch(`https://dev.to/api/articles/latest?username=${personalData.devUsername}`);
         
-  //       if (!res.ok) {
-  //         throw new Error(`HTTP error! status: ${res.status}`);
-  //       }
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
         
-  //       const data = await res.json();
-  //       const filtered = data.filter(item => item?.cover_image).sort(() => Math.random() - 0.5);
-  //       setBlogs(filtered);
-  //     } catch (error) {
-  //       console.error("Failed to fetch blogs:", error);
-  //       // Set empty array as fallback
-  //       setBlogs([]);
-  //     }
-  //   };
+        const data = await res.json();
+        const filtered = data.filter(item => item?.cover_image).sort(() => Math.random() - 0.5);
+        setBlogs(filtered);
+      } catch (error) {
+        console.error("Failed to fetch blogs:", error);
+        // Set empty array as fallback
+        setBlogs([]);
+      }
+    };
 
-  //   getData();
-  // }, [isClient]);
+    getData();
+  }, [isClient]);
 
   return (
     <div suppressHydrationWarning>
-      <HeroSection />
-      {/* <AboutSection />
-      <Experience />
+      {/* <HeroSection /> */}
+      <AboutSection />
+      {/* <Experience />
       <Skills />
       <Projects />
       <Education />
