@@ -1,25 +1,29 @@
 export const skillsData = [
-  'HTML',
-  'CSS',
-  'Javascript',
-  'Typescript',
+  'Flutter',
+  'React Native',
+  'Node Js',
   'React',
-  'Next JS',
-  'Tailwind',
-  'MongoDB',
-  'MySQL',
-  'PostgreSQL',
-  'Git',
-  'AWS',
-  'Bootstrap',
-  'Docker',
-  'Go',
-  'Figma',
+  'Typescript',
+  'JavaScript',
   'Firebase',
-  'MaterialUI',
-  'Nginx',
-  'Strapi'
-]
+  'AWS',
+  'Stripe',
+  'BLE',
+  'Twilio',
+  'Google Analytics',
+  'GitHub',
+  'Airbyte',
+  'Snowflake',
+  'DBT Cloud',
+  'Lightdash',
+  'Forest Admin',
+  'Pipedrive',
+  'Calendly',
+  'Zapier',
+  'Zendesk',
+  'Customer Io'
+];
+
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
 // Couldn't find the required skills? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new

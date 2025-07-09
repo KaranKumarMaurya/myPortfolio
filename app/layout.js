@@ -10,10 +10,11 @@ import "./css/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio of Abu Said - Software Developer",
+  title: "Portfolio of Karan - Full Stack & Flutter Developer",
   description:
-    "This is the portfolio of Abu Said. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
+    "This is the portfolio of Karan Kumar Maurya — a full stack developer and Flutter expert passionate about building real-time apps, smart solutions, and scalable products. I specialize in Flutter, Firebase, and React, and I’m always open to collaborating on meaningful projects or joining a product-focused team.",
 };
+
 
 export default function RootLayout({ children }) {
   return (
@@ -27,7 +28,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
+      {/* <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} /> */}
     </html>
   );
 }

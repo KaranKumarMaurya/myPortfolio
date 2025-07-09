@@ -1,20 +1,20 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
+    title: "Bachelor of Technology - Computer Software Engineering",
+    duration: "Jun 2020 – Jun 2024",
+    institution: "Quantum University, Roorkee",
   },
   {
     id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
+    title: "Intermediate (Class 12th)",
+    duration: "Apr 2019 – Mar 2020",
+    institution: "Jawahar Navodaya Vidyalaya (JNV)",
   },
   {
     id: 3,
-    title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
+    title: "High School (Class 10th)",
+    duration: "Apr 2017 – Mar 2018",
+    institution: "Jawahar Navodaya Vidyalaya (JNV)",
   }
-]
+];

@@ -1,20 +1,26 @@
 export const experiences = [
-  {
+   {
     id: 1,
-    title: 'Software Engineer I',
-    company: "Teton Private Ltd.",
-    duration: "(Jan 2022 - Present)"
+    title: 'Freelance - Hybrid Mobile App Developer',
+    company: 'Self-employed | 5+ Projects',
+    duration: '(June 2025 – Present)'
   },
   {
     id: 2,
-    title: "FullStack Developer",
-    company: "Fiverr (freelance)",
-    duration: "(Jun 2021 - Jan 2022)"
+    title: 'Associate Software Engineer',
+    company: '75Way Technologies Pvt Ltd, Mohali',
+    duration: '(Jan 2024 – July 2025)'
   },
   {
     id: 3,
-    title: "Self Employed",
-    company: "Code and build something in everyday.",
-    duration: "(Jan 2018 - Present)"
+    title: 'Freelance - Full Stack Developer',
+    company: 'Self-employed | 10+ Projects',
+    duration: '(Mar 2021 – Nov 2023)'
+  },
+  {
+    id: 4,
+    title: 'App Development Intern',
+    company: 'DCube Software Solutions, Roorkee',
+    duration: '(Jul 2021 – Sept 2021)'
   }
-]
+];
