@@ -1,13 +1,32 @@
-// @flow strict
-
 'use client';
 
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './blog-card';
+import { personalData } from '@/utils/data/personal-data';
 
-function Blog({ blogs = [] }) {
-  const visibleBlogs = blogs?.filter(blog => blog?.cover_image) || [];
+function Blog() {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch(`https://dev.to/api/articles/latest?username=${personalData.devUsername}`);
+        if (!res.ok) throw new Error("Failed to fetch blogs");
+        const data = await res.json();
+        const filtered = data.filter(blog => blog?.cover_image).sort(() => Math.random() - 0.5);
+        setBlogs(filtered);
+      } catch (error) {
+        console.error("Failed to fetch blogs:", error);
+        setBlogs([]);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  const visibleBlogs = blogs || [];
 
   return (
     <div id='blogs' className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
@@ -33,7 +52,7 @@ function Blog({ blogs = [] }) {
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 lg:gap-8 xl:gap-10">
             {visibleBlogs.slice(0, 6).map((blog, i) => (
-              <BlogCard blog={blog} key={blog.id||i} />
+              <BlogCard blog={blog} key={blog.id || i} />
             ))}
           </div>
 
