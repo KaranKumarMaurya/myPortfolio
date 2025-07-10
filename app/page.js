@@ -12,7 +12,7 @@ import Skills from "./components/homepage/skills";
 export default function Home() {
   return (
     <div>
-      <Text>sfsdfsdfdsfsdfsdfsd</Text>
+      <p>Hello, this is a simple test message.</p>
       {/* <HeroSection /> */}
       {/* <AboutSection />
       <Experience />
