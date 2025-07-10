@@ -6,8 +6,12 @@ const GlowCard = ({ children, identifier }) => {
   useEffect(() => {
     if (typeof window === 'undefined') return; // ✅ Prevents SSR crash
 
+    // Move all DOM queries inside the window check
     const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
     const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
+
+    // Early return if elements not found
+    if (!CONTAINER || !CARDS.length) return;
 
     const CONFIG = {
       proximity: 40,
@@ -50,7 +54,6 @@ const GlowCard = ({ children, identifier }) => {
     };
 
     const RESTYLE = () => {
-      if (!CONTAINER) return;
       CONTAINER.style.setProperty('--gap', CONFIG.gap);
       CONTAINER.style.setProperty('--blur', CONFIG.blur);
       CONTAINER.style.setProperty('--spread', CONFIG.spread);
