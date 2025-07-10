@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <p>Hello, this is a simple test message.</p>
-      {/* <HeroSection /> */}
+      <HeroSection />
       {/* <AboutSection />
       <Experience />
       <Skills />
