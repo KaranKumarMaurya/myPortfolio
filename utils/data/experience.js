@@ -14,7 +14,7 @@ export const experiences = [
   {
     id: 3,
     title: 'Freelance - Full Stack Developer',
-    company: 'Self-employed | 10+ Projects',
+    company: 'Self-employed | 25+ Projects',
     duration: '(Mar 2021 – Nov 2023)'
   },
   {
