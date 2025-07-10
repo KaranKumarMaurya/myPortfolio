@@ -15,7 +15,7 @@ export default function Home() {
       <p>Hello, this is a simple test message.</p>
       <HeroSection />
       <AboutSection />
-      {/* <Experience /> */}
+      <Experience />
       <Skills />
       <Projects />
       <Education />
