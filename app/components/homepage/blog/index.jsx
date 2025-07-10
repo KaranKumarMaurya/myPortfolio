@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './blog-card';
 
-function Blog({ blogs }) {
+function Blog({ blogs = [] }) {
   const visibleBlogs = blogs?.filter(blog => blog?.cover_image) || [];
 
   return (
@@ -33,7 +33,7 @@ function Blog({ blogs }) {
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 lg:gap-8 xl:gap-10">
             {visibleBlogs.slice(0, 6).map((blog, i) => (
-              <BlogCard blog={blog} key={i} />
+              <BlogCard blog={blog} key={blog.id||i} />
             ))}
           </div>
 

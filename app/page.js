@@ -1,6 +1,3 @@
-'use client';
-
-import { useEffect, useState } from "react";
 import { personalData } from "@/utils/data/personal-data";
 import AboutSection from "./components/homepage/about";
 import Blog from "./components/homepage/blog";
@@ -11,48 +8,34 @@ import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 
-export default function Home() {
-  const [blogs, setBlogs] = useState([]);
-  const [isClient, setIsClient] = useState(false);
+export default async function Home() {
+  let blogs = [];
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  try {
+    const res = await fetch(`https://dev.to/api/articles/latest?username=${personalData.devUsername}`, {
+      cache: "no-store", // disables caching
+    });
 
-  useEffect(() => {
-    if (!isClient) return;
-
-    const getData = async () => {
-      try {
-        const res = await fetch(`https://dev.to/api/articles/latest?username=${personalData.devUsername}`);
-        
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        
-        const data = await res.json();
-        const filtered = data.filter(item => item?.cover_image).sort(() => Math.random() - 0.5);
-        setBlogs(filtered);
-      } catch (error) {
-        console.error("Failed to fetch blogs:", error);
-        // Set empty array as fallback
-        setBlogs([]);
-      }
-    };
-
-    getData();
-  }, [isClient]);
+    if (res.ok) {
+      const data = await res.json();
+      blogs = data
+        .filter((item) => item?.cover_image)
+        .sort(() => Math.random() - 0.5); // optional shuffle
+    }
+  } catch (error) {
+    console.error("Failed to fetch blogs:", error);
+  }
 
   return (
-    <div suppressHydrationWarning>
-      {/* <HeroSection /> */}
+    <div>
+      <HeroSection />
       <AboutSection />
-      {/* <Experience />
+      <Experience />
       <Skills />
       <Projects />
       <Education />
       <Blog blogs={blogs} />
-      <ContactSection /> */}
+      <ContactSection />
     </div>
   );
 }
