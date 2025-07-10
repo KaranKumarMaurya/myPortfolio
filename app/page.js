@@ -16,10 +16,10 @@ export default function Home() {
       <AboutSection />
       <Experience />
       <Skills />
-      <Projects />
+      {/* <Projects />
       <Education />
-      <Blog /> {/* ✅ blogs prop removed */}
-      <ContactSection />
+      <Blog />
+      <ContactSection /> */}
     </div>
   );
 }
