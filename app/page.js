@@ -14,11 +14,11 @@ export default function Home() {
     <div>
       <p>Hello, this is a simple test message.</p>
       <HeroSection />
-      {/* <AboutSection />
+      <AboutSection />
       <Experience />
       <Skills />
       <Projects />
-      <Education /> */}
+      <Education />
       {/* <Blog />
       <ContactSection /> */}
     </div>
