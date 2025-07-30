@@ -1,4 +1,7 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
   "redirects": [
     {
       "source": "/(.*)",
@@ -8,7 +11,7 @@
           "value": "karan-portfolio-code-crabs-projects.vercel.app"
         }
       ],
-      "destination": "https://karan.sitehec.com/:1",
+      "destination": "https://karan.sitehec.com/$1",
       "permanent": true
     },
     {
@@ -19,7 +22,7 @@
           "value": "karan-portfolio-git-main-code-crabs-projects.vercel.app"
         }
       ],
-      "destination": "https://karan.sitehec.com/:1",
+      "destination": "https://karan.sitehec.com/$1",
       "permanent": true
     },
     {
@@ -30,8 +33,31 @@
           "value": "karan-portfolio-dusky.vercel.app"
         }
       ],
-      "destination": "https://karan.sitehec.com/:1",
+      "destination": "https://karan.sitehec.com/$1",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
     }
   ]
 }
