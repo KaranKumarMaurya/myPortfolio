@@ -9,7 +9,7 @@ import { FaFacebook, FaStackOverflow } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
-import ContactForm from './contact-form';
+import RevealOnScroll from "../../helper/reveal-on-scroll";
 
 function ContactSection() {
   return (
@@ -21,8 +21,23 @@ function ContactSection() {
         <span className="h-36 w-[2px] bg-[#1a1443]"></span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-        <ContactForm />
-        <div className="lg:w-3/4 ">
+        <RevealOnScroll delay={90} className="w-full">
+          <div>
+          <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">Book a meeting</p>
+          <div className="rounded-lg border border-[#464c6a] bg-[#0f172e] p-2">
+            <iframe
+              src="https://calendly.com/karankumarmaurya2002/30min?hide_gdpr_banner=1"
+              width="100%"
+              height="680"
+              frameBorder="0"
+              title="Book a meeting with Karan"
+              className="rounded-md"
+            />
+          </div>
+          </div>
+        </RevealOnScroll>
+        <RevealOnScroll delay={180} className="lg:w-3/4 ">
+          <div>
           <div className="flex flex-col gap-5 lg:gap-9">
             <p className="text-sm md:text-xl flex items-center gap-3">
               <MdAlternateEmail
@@ -82,7 +97,8 @@ function ContactSection() {
               />
             </Link>
           </div>
-        </div>
+          </div>
+        </RevealOnScroll>
       </div>
     </div>
   );

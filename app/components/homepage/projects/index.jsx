@@ -1,6 +1,7 @@
 'use client'; 
 
 import { projectsData } from '@/utils/data/projects-data';
+import Link from 'next/link';
 import ProjectCard from './project-card';
 
 const Projects = () => {
@@ -30,6 +31,17 @@ const Projects = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-10">
+          <Link
+            href="https://navikx.com/work-with-us#process"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-8 py-2.5 md:py-3 text-xs md:text-sm font-medium uppercase tracking-wider text-white transition-all duration-200 hover:scale-105"
+          >
+           Click Here For More
+          </Link>
         </div>
       </div>
     </div>

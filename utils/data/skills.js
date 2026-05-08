@@ -18,10 +18,13 @@ export const skillsData = [
   'Lightdash',
   'Forest Admin',
   'Pipedrive',
+  'Zendesk',
+  'Customer Io',
   'Calendly',
   'Zapier',
-  'Zendesk',
-  'Customer Io'
+  'Python',
+  'Django',
+  'Docker',
 ];
 
 
